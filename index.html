@@ -256,7 +256,6 @@
 <!--Service-->
 
 
-
 <!--Footer-->
 <footer class="footer_wrapper" id="contact" style="margin-top: 0; padding-top: 0;">
   <div class="container">
@@ -264,32 +263,39 @@
       <div class="contact_section">
         <h2>Cere ofertă</h2>
         <div class="row">
-          <div class="col-lg-4">
-            
-          </div>
-          <div class="col-lg-4">
-           
-          </div>
-          <div class="col-lg-4">
-          
-          </div>
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4"></div>
         </div>
       </div>
       <div class="row">
- 
         <div class="col-lg-12 wow fadeInLeft delay-06s">
           <div class="form">
-            <input class="input-text" type="text" name="" value="Nume, Prenume *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-            <input class="input-text" type="text" name="" value="E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-            <input class="input-text" type="text" name="" value="Telefon *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-            <textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Mesaj *</textarea>
-            <input class="input-btn" type="submit" value="Trimite">
+            <!-- Form Start -->
+            <form id="contactForm" method="POST" action="mail.php">
+              <input class="input-text" type="text" name="name" placeholder="Nume, Prenume *" required>
+              <input class="input-text" type="email" name="email" placeholder="E-mail *" required>
+              <input class="input-text" type="text" name="phone" placeholder="Telefon *" required>
+              <textarea class="input-text text-area" name="message" placeholder="Mesaj *" required></textarea>
+              <input class="input-btn" type="submit" value="Trimite">
+            </form>
+            <!-- Form End -->
           </div>
         </div>
-		
       </div>
     </section>
   </div>
+</footer>
+
+<!-- JavaScript pentru resetarea formularului -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', function() {
+    // Golește toate câmpurile formularului după trimitere
+    this.reset();
+});
+</script>
+
+
 
   <!-- Secțiunea de Subsol -->
   <footer style="margin-top: 0; padding-top: 0; margin-bottom: -150px;">
