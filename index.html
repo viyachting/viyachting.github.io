@@ -125,8 +125,8 @@
 <body>
   <div class="hero">
     <video autoplay muted loop playsinline>
-      <source src="video2.mp4" type="video/mp4">
-      <source src="video2.webm" type="video/webm">
+      <source src="img/video2.mp4" type="video/mp4">
+      <source src="img/video2.webm" type="video/webm">
       Browserul tău nu suportă elementul video.
     </video>
     
@@ -148,7 +148,7 @@
 	<div class="row">
       <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><img src="img/lala.jpg" class="img-circle delay-03s animated wow zoomIn" alt=""style="display: block; margin: 0 auto; width: auto; height: auto;"></div>
       	<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
-        	<div class=" delay-01s animated fadeInDown wow animated">
+        	<div class=" delay-01s animated fadeInDown wow animated" style="padding-top: 20px;">
 			<h3>VI Yachting – Partenerul tău de încredere pe mare</h3><br/> 
             <p>La VI Yachting, pasiunea noastră pentru mare se reflectă în fiecare serviciu pe care îl oferim. Cu o echipă de profesioniști dedicați și parteneriate solide cu flote de ambarcațiuni de top, ne asigurăm că fiecare experiență nautică este una memorabilă. Oferim servicii complete, de la întreținerea și reparația ambarcațiunilor până la croaziere de lux, închiriere de yachturi și organizare de evenimente pe apă.</p> <br/>
 <p>De asemenea, suntem alături de tine cu serviciul de consultanță specializată pentru achiziția de ambarcațiuni și servicii de transfer, oferindu-ți asistență personalizată la fiecare pas, astfel încât să te bucuri de un proces simplu și eficient. Fie că ești un navigator experimentat sau începător, ne asigurăm că fiecare detaliu este gestionat cu atenție și profesionalism. Cu VI Yachting, navighezi mereu în siguranță și stil, bucurându-te de cele mai bune condiții și peisaje de neuitat.</p>
@@ -176,7 +176,7 @@
           <div class="service_block">
             <div class="service_icon delay-03s animated wow zoomIn">
               <span>
-                <img src="serviciu111.png" alt="Custom Icon" style="width: 180px; height: 180px;">
+                <img src="img/serviciu111.png" alt="Custom Icon" style="width: 180px; height: 180px;">
               </span>
             </div>
             <h3 class="animated fadeInUp wow">Reparații și întreținere ambarcațiuni</h3>
@@ -187,7 +187,7 @@
           <div class="service_block">
             <div class="service_icon delay-03s animated wow zoomIn">
               <span>
-                <img src="serviciu22.png" alt="Custom Icon" style="width: 180px; height: 180px;">
+                <img src="img/serviciu22.png" alt="Custom Icon" style="width: 180px; height: 180px;">
               </span>
             </div>
             <h3 class="animated fadeInUp wow">Transfer ambarcațiuni</h3>
@@ -198,7 +198,7 @@
           <div class="service_block">
             <div class="service_icon delay-03s animated wow zoomIn">
               <span>
-                <img src="serviciu2.png" alt="Custom Icon" style="width: 180px; height: 180px;">
+                <img src="img/serviciu2.png" alt="Custom Icon" style="width: 180px; height: 180px;">
               </span>
             </div>
             <h3 class="animated fadeInUp wow">Intermediere vânzare ambarcațiuni</h3>
@@ -220,7 +220,7 @@
           <div class="service_block">
             <div class="service_icon delay-03s animated wow zoomIn">
               <span>
-                <img src="serviciu111.png" alt="Custom Icon" style="width: 180px; height: 180px;">
+                <img src="img/serviciu111.png" alt="Custom Icon" style="width: 180px; height: 180px;">
               </span>
             </div>
             <h3 class="animated fadeInUp wow">Închiriere ambarcațiuni</h3>
@@ -231,7 +231,7 @@
           <div class="service_block">
             <div class="service_icon delay-03s animated wow zoomIn">
               <span>
-                <img src="serviciu111.png" alt="Custom Icon" style="width: 180px; height: 180px;">
+                <img src="img/serviciu111.png" alt="Custom Icon" style="width: 180px; height: 180px;">
               </span>
             </div>
             <h3 class="animated fadeInUp wow">Cursuri private de navigație</h3>
@@ -242,7 +242,7 @@
           <div class="service_block">
             <div class="service_icon delay-03s animated wow zoomIn">
               <span>
-                <img src="serviciu111.png" alt="Custom Icon" style="width: 180px; height: 180px;">
+                <img src="img/serviciu111.png" alt="Custom Icon" style="width: 180px; height: 180px;">
               </span>
             </div>
             <h3 class="animated fadeInUp wow">Reparații și întreținere ambarcațiuni</h3>
@@ -275,7 +275,9 @@
             <form action="https://formspree.io/f/mblrabrb" method="POST">
               <input class="input-text" type="text" name="name" placeholder="Nume, Prenume *" required>
               <input class="input-text" type="email" name="email" placeholder="E-mail *" required>
-              <input class="input-text" type="text" name="phone" placeholder="Telefon *" required>
+              <input class="input-text" type="text" name="phone" placeholder="Telefon *" required
+                pattern="07[0-9]{8}" minlength="10" maxlength="10"
+                title="Numărul de telefon trebuie să înceapă cu 07 și să conțină exact 10 cifre">
               <textarea class="input-text text-area" name="message" placeholder="Mesaj *" required></textarea>
               <input class="input-btn" type="submit" value="Trimite">
             </form>
@@ -315,8 +317,10 @@ document.getElementById('contactForm').addEventListener('submit', function() {
         <div class="footer-links" style="margin-top: 30px;">
             <h3>Linkuri Utile</h3>
             <ul>
-                <li><a href="#about" onclick="scrollToSection('about')">Despre Noi</a></li>
-                <li><a href="#services" onclick="scrollToSection('services')">Servicii</a></li>
+                <li><a href="#aboutUs" onclick="scrollToSection('about')">Despre Noi</a></li>
+                <li><a href="#service" onclick="scrollToSection('services')">Servicii</a></li>
+                <li><a href="vanzare.html" onclick="scrollToSection('services')">Vânzare Ambarcațiuni</a></li>
+                <li><a href="galerie.html" onclick="scrollToSection('services')">Galerie</a></li>
             </ul>
         </div>
 
