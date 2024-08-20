@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>Beneteau Flyer 8 SPACEdeck - VI Yachting</title>
+    <link rel="icon" href="img/logo2.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<!--Header_section-->
+<header id="header_wrapper">
+    <div class="container">
+      <div class="header_box">
+        <div class="logo"><a href="index.html"><img src="img/logo2.png" height="100" alt="logo"></a></div>
+        <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+          <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          </div>
+          <div id="main-nav" class="collapse navbar-collapse navStyle">
+              <ul class="nav navbar-nav" id="mainNav">
+                <li><a href="index.html" class="scroll-link">Acasă</a></li>
+                <li><a href="index.html#aboutUs" class="scroll-link">Despre Noi</a></li>
+                <li><a href="index.html#service" class="scroll-link">Servicii</a></li>
+                <li><a href="vanzare.html" class="scroll-link">Vânzare Ambarcațiuni</a></li>
+                <li><a href="galerie.html" class="scroll-link">Galerie</a></li>
+                <li><a href="index.html#contact" class="scroll-link">Contact</a></li>
+              </ul>
+        </div>
+       </nav>
+     <div class="social-media">
+      <a href="https://www.facebook.com/profile.php?id=61564291224940" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/viyachting.ro/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com" target="_blank" class="social-icon"><i class="fab fa-tiktok" style="padding-right: 15px;"></i></a>
+    </div>
+      </div>
+    </div>
+  </header>
+  <!--Header_section--> 
+
+<style>
+    /* Stilizare pentru modal */
+    .modal {
+      position: fixed;
+      z-index: 9999;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover, .close:hover {
+      color: #999;
+    }
+    
+    /* Asigură-te că imaginile din galerie sunt responsive */
+    .img-responsive {
+      height: auto;
+      cursor: pointer;
+      width: 100%;
+    }
+
+  </style>
+
+
+<!-- Galerie_section -->
+<section id="galerie">
+    <div class="container" style="margin-top: 20px;">
+        <h2>Beneteau Flyer 8</h2>
+        <div class="inner_section">
+        <div class="row">
+          <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><img src="img/boat2.jpg" class="img-circle delay-03s animated wow zoomIn" alt=""style="display: block; margin: 0 auto; width: auto; height: auto;"></div>
+              <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
+                <div class=" delay-01s animated fadeInDown wow animated" style="padding-top: 20px;">
+                <h3>Beneteau Flyer 8 - o ambarcațiune de familie</h3><br/> 
+                <ul style="list-style-type: disc; padding-left: 20px; font-family: 'Arial', sans-serif; color: #444;">
+                    <li>Întreținerea și reparația ambarcațiunilor</li>
+                    <li>Cruise de lux</li>
+                    <li>Închiriere de yachturi</li>
+                    <li>Organizare de evenimente pe apă</li>
+                </ul>    </div>
+      <div class="row">
+        <div class="col-md-4" style="margin-top: 10px;">
+          <img src="img/portfolio_pic1.jpg" alt="Imagine 1" class="img-responsive" onclick="openModal(this.src)">
+        </div>
+        <div class="col-md-4" style="margin-top: 10px;">
+          <img src="img/portfolio_pic2.jpg" alt="Imagine 2" class="img-responsive" onclick="openModal(this.src)">
+        </div>
+        <div class="col-md-4" style="margin-top: 10px;">
+          <img src="img/lala.jpg" alt="Imagine 3" class="img-responsive" onclick="openModal(this.src)">
+        </div>
+        <!-- Adaugă mai multe imagini aici -->
+      </div>
+    </div>
+  </section>
+  <!-- Galerie_section -->
+
+<!-- Modal -->
+<div id="modal" class="modal" style="display: none;">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+    <a class="next" onclick="changeImage(1)">&#10095;</a>
+    <img class="modal-content" id="modal-image">
+    <div id="caption"></div>
+  </div>
+  <!--/Modal -->
+  
+    
+<script>
+  // Variabila pentru a ține evidența imaginii curente
+  var currentImageIndex = 0;
+  var images = Array.from(document.querySelectorAll('#galerie img')).map(img => img.src); // Selectează imaginile corect
+
+  // Deschide modalul și setează imaginea
+  function openModal(src) {
+    var modal = document.getElementById("modal");
+    var modalImg = document.getElementById("modal-image");
+    var captionText = document.getElementById("caption");
+
+    // Găsește indexul imaginii selectate
+    currentImageIndex = images.indexOf(src);
+
+    modal.style.display = "block";
+    modalImg.src = src;
+    captionText.innerHTML = `Imagine ${currentImageIndex + 1} din ${images.length}`;
+  }
+
+  // Închide modalul
+  function closeModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none";
+  }
+
+  // Schimbă imaginea curentă
+  function changeImage(direction) {
+    currentImageIndex += direction;
+
+    // Asigură-te că indexul se află în intervalul valid
+    if (currentImageIndex >= images.length) {
+      currentImageIndex = 0;
+    } else if (currentImageIndex < 0) {
+      currentImageIndex = images.length - 1;
+    }
+
+    var modalImg = document.getElementById("modal-image");
+    var captionText = document.getElementById("caption");
+
+    modalImg.src = images[currentImageIndex];
+    captionText.innerHTML = `Imagine ${currentImageIndex + 1} din ${images.length}`;
+  }
+
+</script>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="img/logo2.png" alt="VI Yachting Logo" height="100">
+        </div>
+        <div class="footer-details" style="margin-top: 20px;">
+            <h3>Contact</h3>
+            <ul>
+                <li><i class="fas fa-envelope"></i><a href="mailto:viyachting@gmail.com"> viyachting@gmail.com</a></li>
+                <li><i class="fas fa-phone"></i><a href="tel:+40736068850"> +40 736 068 850</a></li>
+            </ul>
+        </div>
+        <div class="footer-links" style="margin-top: 30px;">
+            <h3>Linkuri Utile</h3>
+            <ul>
+                <li><a href="#about" onclick="scrollToSection('about')">Despre Noi</a></li>
+                <li><a href="#services" onclick="scrollToSection('services')">Servicii</a></li>
+            </ul>
+        </div>
+        <div class="footer-anpc">
+            <h3>ANPC</h3>
+            <ul>
+                <li>
+                    <a href="https://anpc.ro/ce-este-sal/" target="_blank">
+                        <img src="img/odr.png" class="footer-img">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" target="_blank">
+                        <img src="img/sal.png" class="footer-img">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright" style="text-align: center; font-size: 16px; color: #000000; padding: 10px 0; background-color: #386177; position: relative; bottom: 0; width: 100%;">
+      <p>Copyright 2024 © VI Yachting</p>
+  </div>
+</footer>
+  
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+  <script type="text/javascript" src="js/jquery.nav.js"></script> 
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/jquery.isotope.js"></script>
+  <script type="text/javascript" src="js/wow.js"></script> 
+  <script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+</html>
