@@ -42,6 +42,30 @@
     </div>
       </div>
     </div>
+
+
+    <!-- Registration Form -->
+<form id="registerForm">
+    <input type="email" id="regEmail" placeholder="Email">
+    <input type="password" id="regPassword" placeholder="Password">
+    <button type="submit">Register</button>
+  </form>
+  
+  <!-- Login Form -->
+  <form id="loginForm">
+    <input type="email" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button type="submit">Login</button>
+  </form>
+
+  <!-- Boat Listing Form (display only for logged-in users) -->
+<form id="boatForm" style="display:none;">
+    <input type="text" id="boatTitle" placeholder="Boat Title">
+    <input type="text" id="boatPrice" placeholder="Price">
+    <textarea id="boatDescription" placeholder="Description"></textarea>
+    <button type="submit">Post Boat</button>
+  </form>
+  
   </header>
   <!--Header_section--> 
 
@@ -202,31 +226,35 @@
   <script type="text/javascript" src="js/jquery.isotope.js"></script>
   <script type="text/javascript" src="js/wow.js"></script> 
   <script type="text/javascript" src="js/custom.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCfvIeIKuhzWVmOKfdtQy2mZYbTRa3X68Y",
+      authDomain: "viyachting-448ce.firebaseapp.com",
+      projectId: "viyachting-448ce",
+      storageBucket: "viyachting-448ce.appspot.com",
+      messagingSenderId: "323275111281",
+      appId: "1:323275111281:web:182014abd502e5c7dfd4d0",
+      measurementId: "G-QK60SWCBTT"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+<script src="C:\Users\vlad.ion\Desktop\site\test/firebaseConfig.js"></script>
+
 
 </body>
-
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCfvIeIKuhzWVmOKfdtQy2mZYbTRa3X68Y",
-    authDomain: "viyachting-448ce.firebaseapp.com",
-    projectId: "viyachting-448ce",
-    storageBucket: "viyachting-448ce.appspot.com",
-    messagingSenderId: "323275111281",
-    appId: "1:323275111281:web:182014abd502e5c7dfd4d0",
-    measurementId: "G-QK60SWCBTT"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
-    
 </html>
